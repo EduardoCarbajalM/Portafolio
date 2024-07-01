@@ -1,0 +1,100 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #007bff;
+  }
+  
+  header h1,
+  header p {
+    margin: 0;
+  }
+  
+  header nav .nav-link {
+    color: white;
+  }
+  
+  header nav .nav-link:hover {
+    color: #ddd;
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 0;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  section.bg-light {
+    background-color: #f8f9fa;
+  }
+  
+  .card img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Contact Form */
+  #contacto .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  #contacto .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  #contacto .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+  /* Sombra en la parte inferior de los contenedores */
+.sombra-inferior {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos adicionales para la sección de experiencia laboral */
+  #experiencia-laboral .bg-background {
+    background-color: #ffffff; /* Cambia esto según sea necesario */
+  }
+  
+  #experiencia-laboral h3 {
+    color: #333; /* Color del título del puesto de trabajo */
+  }
+  
+  #experiencia-laboral p {
+    color: #666; /* Color de las fechas */
+  }
+  
+  #experiencia-laboral ul {
+    color: #666; /* Color de los puntos de experiencia */
+  }
+  
+  
+  /* Footer */
+  footer {
+    background-color: #343a40;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 767.98px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header nav {
+      margin-top: 20px;
+    }
+  }
+  
