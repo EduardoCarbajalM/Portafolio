@@ -1,0 +1,88 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #007bff;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Sections */
+main {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+main input[type="text"], main select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Sombra en la parte inferior de los contenedores */
+.sombra-inferior {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el buscador y el select */
+#search, #filter {
+    width: 300px; /* Ajusta esto según tus necesidades */
+    height: 35px; /* Ajusta esto según tus necesidades */
+}
+
+/* Estilo para el buscador */
+#search {
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+/* Estilo para el select */
+#filter {
+    border-radius: 5px;
+    background-size: 10px;
+    padding-right: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsiveness */
+@media (max-width: 767.98px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header nav {
+      margin-top: 20px;
+    }
+}
