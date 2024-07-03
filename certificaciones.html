@@ -63,8 +63,29 @@
                     });
                 }
             });
+
+            document.getElementById('search').addEventListener('input', function() {
+            // Obtén el texto de búsqueda en minúsculas
+            const searchText = this.value.toLowerCase();
+
+            // Para cada certificado...
+            const allCertificates = document.querySelectorAll('.col-md-4');
+            allCertificates.forEach(function(certificate) {
+                // Obtén el título del certificado en minúsculas
+                const title = certificate.querySelector('.card-title').textContent.toLowerCase();
+
+                // Si el título del certificado incluye el texto de búsqueda, muestra el certificado, si no, ocúltalo
+                if (title.includes(searchText)) {
+                    certificate.style.display = 'block';
+                    certificate.parentNode.parentNode.style.display = 'block';
+                } else {
+                    certificate.style.display = 'none';
+                    certificate.parentNode.parentNode.style.display = 'none';
+                }
+            });
         });
-    </script>
+        });
+</script>
 </head>
 <body>
     <div>
