@@ -16,6 +16,7 @@ function scrollToTop() {
   }, 700);
 }
 
+/*
 function addCertification(image, title, description, catalog, url) {
   const container = document.querySelector(`#${catalog} .row`);
   if (!container) {
@@ -51,3 +52,4 @@ addCertification('/placeholder.svg', 'Certificación en Desarrollo Web', 'Aprend
 addCertification('/placeholder.svg', 'Certificación en Gestión de Proyectos', 'Aprende a planificar, organizar y controlar proyectos de manera efectiva.', 'Negocios', 'http://example.com/certificado2');
 // Añade más certificados según sea necesario
 });
+*/
