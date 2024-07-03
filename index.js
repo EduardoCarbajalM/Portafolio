@@ -13,6 +13,6 @@ window.onscroll = function() {
     window.scrollTo({top: 0, behavior: 'smooth'});
     setTimeout(function() {
       scrollToTop.classList.remove('clicked');
-    }, 500);
+    }, 600);
   }
   
