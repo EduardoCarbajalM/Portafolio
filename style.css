@@ -82,7 +82,7 @@ body {
     right: 20px;
     color: #0056b3;
     font-size: 50px;
-    transition: color 0.5s ease;
+    transition: color 0.7s ease;
   }
   
   #scrollToTop.clicked {
