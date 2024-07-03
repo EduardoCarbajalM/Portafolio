@@ -6,18 +6,22 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style_certificaciones.css">
     <title>Certificaciones - Eduardo Carbajal Mendoza</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
-        function addCertification(image, title, description, catalog, url) {
+        function addCertification(image, title, description, catalog, url, moreInfo) {
             const container = document.querySelector(`#${catalog} .row`);
             if (!container) {
                 console.error(`No se encontró el contenedor para el catálogo: ${catalog}`);
                 return;
             }
-    
+
+            // Genera un ID único para el modal
+            const modalId = `moreInfoModal-${title.replace(/\s+/g, '-')}`;
+
             // Crea un nuevo elemento div
             const certificationDiv = document.createElement('div');
-            certificationDiv.className = 'col-md-4';
-    
+            certificationDiv.className = 'col-md-4 d-flex align-items-stretch';
+
             // Crea el contenido HTML dentro del div
             certificationDiv.innerHTML = `
                 <div class="card mb-4 shadow-sm sombra-inferior">
@@ -27,36 +31,129 @@
                         <p class="card-text">
                             ${description}
                         </p>
-                        <a href="${url}" target="_blank" class="btn btn-primary">Ver Certificado</a>
+                        <div class="card-buttons mt-auto">
+                            <a href="${url}" target="_blank" class="btn btn-primary">Ver Certificado</a>
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#${modalId}">
+                                Más información
+                            </button>
+                        </div>    
+                    </div>
+                </div>
+                <div class="modal fade" id="${modalId}" tabindex="-1" role="dialog" aria-labelledby="${modalId}Label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="${modalId}Label">Más información sobre ${title}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ${moreInfo}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
-    
+
             // Agrega el nuevo div al contenedor
             container.appendChild(certificationDiv);
         }
-    
+
         document.addEventListener('DOMContentLoaded', () => {
-            addCertification('/placeholder.svg', 'Certificación en Desarrollo Web', 'Aprende las últimas tecnologías y técnicas para crear sitios web modernos y responsivos.', 'Programación', 'http://example.com/certificado1');
+            // Programación
+            addCertification(
+        'img/Certificado_Back_end.png', 
+        'Programa Oracle Next Education F2 T5 Back-end', 
+        'Formación integral en back end.', 
+        'Programación', 
+        'https://app.aluracursos.com/program/certificate/920607b7-8be4-450f-81f6-cfd63bec1204', 
+        'Participé en una formación integral de back end con Oracle y Alura, que abarcó desde habilidades de desarrollo personal y agilidad empresarial hasta programación avanzada con Java y Spring Boot. Esta formación me proporcionó una base sólida en tecnologías de back end y habilidades interpersonales.'
+    );
+
+            addCertification(
+                'img/sql_mysql_server_oracle.png', 
+                'Formación SQL con MySQL Server de Oracle - ONE', 
+                'Formación en SQL con MySQL Server de Oracle.', 
+                'Programación', 
+                'https://app.aluracursos.com/degree/certificate/4cf6defb-3677-435d-8ee8-7e156ecbc8fe', 
+                'Realicé una formación en SQL con MySQL Server de Oracle, que abarcó desde consultas básicas hasta avanzadas, manipulación de datos, seguridad y optimización de bases de datos. Esta formación me ha preparado para roles desafiantes en el desarrollo y administración de bases de datos.'
+            );
+
+            addCertification(
+                'img/python_data_science_OCI_Oracle.png', 
+                'Formación Python, Data Science en OCI y Oracle Analytics - ONE', 
+                'Formación en Python y Data Science.', 
+                'Programación', 
+                'https://app.aluracursos.com/degree/certificate/ec5df59b-acf1-47c5-a8c8-b7311af2fd4b', 
+                'Realicé una formación en SQL con MySQL Server de Oracle, que abarcó desde consultas básicas hasta avanzadas, manipulación de datos, seguridad y optimización de bases de datos. Esta formación me ha preparado para roles desafiantes en el desarrollo y administración de bases de datos.'
+            );
+
+            addCertification(
+                'img/sql_con_mysql.png', 
+                'Formación SQL con MySQL - ONE', 
+                'Curso de SQL con MySQL.', 
+                'Programación', 
+                'https://app.aluracursos.com/degree/certificate/d07c177f-3d8b-4845-b681-8667b9522bc3', 
+                'En mi curso de SQL con MySQL, adquirí una sólida base en la manipulación y consulta de datos, profundicé en las consultas SQL, aprendí a manipular datos con comandos DML y a ejecutar código con Procedures SQL. Consolidé mis habilidades con un proyecto final y finalmente, me sumergí en la administración de MySQL, aprendiendo sobre seguridad y optimización de la base de datos. Esta experiencia integral me ha equipado con habilidades valiosas para futuros proyectos y roles.'
+            );
+
+            addCertification(
+                'img/Java_Spring_Boot_G5.png', 
+                'Java y Spring Boot G5 - ONE', 
+                'Habilidades en Java y Spring Boot. Usando Hibernate', 
+                'Programación', 
+                'https://app.aluracursos.com/degree/certificate/5265d5cf-6778-40a7-a02e-ff377905f2fe', 
+                'Adquirí habilidades en SQL con MySQL, Java y JDBC, persistencia con JPA: Hibernate, y desarrollo de API Rest con Spring Boot 3. Aprendí a proteger, documentar, probar y preparar una API para su implementación.'
+            );
+
+            addCertification(
+                'img/Java_BD.png', 
+                'Integre aplicaciones Java con Base de datos', 
+                'Habilidades en Java y JDBC.', 
+                'Programación', 
+                'https://app.aluracursos.com/degree/certificate/57f95435-0fd3-4935-9e01-7bd3df71f8b6', 
+                'Adquirí habilidades en Java y JDBC, trabajando directamente con una base de datos. Profundicé en la persistencia con JPA: Hibernate y avanzé en Java y JPA con consultas avanzadas, rendimiento y modelos complejos.'
+            );
+
+            addCertification(
+                'img/Java_Orientado_Objetos.png', 
+                'Java Orientado a Objetos G5 - ONE', 
+                'Conceptos de Orientación a Objetos en Java.', 
+                'Programación', 
+                'https://app.aluracursos.com/degree/certificate/99f0be9c-9d8f-4859-9d75-82fc183d5557', 
+                'Comencé con Java JRE y JDK, compilando y ejecutando mi primer programa. Luego, entendí la Orientación a Objetos y el Polimorfismo en Java, incluyendo herencia e interfaces. Aprendí a crear, lanzar y controlar excepciones en Java Excepciones. Además, programé con la clase Object y String en Java y java.lang, y trabajé con Colecciones, Wrappers y Lambda expressions en Java y java.util.'
+            );
+
+            addCertification(
+                'img/Principiante_Programacion_G5.png', 
+                'Principiante en Programación G5 - ONE', 
+                'Fundamentos de programación.', 
+                'Programación', 
+                'https://app.aluracursos.com/degree/certificate/8937463e-ac78-49cd-8ba2-20a0820f11e2', 
+                'Adquirí habilidades en lógica de programación, HTML5, CSS3 y Git. Completé desafíos prácticos de Front End y Java, reforzando mi base en programación y ganando experiencia en la resolución de problemas.'
+            );
+                    
+            // Negocios
             addCertification('/placeholder.svg', 'Certificación en Gestión de Proyectos', 'Aprende a planificar, organizar y controlar proyectos de manera efectiva.', 'Negocios', 'http://example.com/certificado2');
             // Añade más certificados según sea necesario
 
             // Agrega un evento de cambio al select
             document.getElementById('filter').addEventListener('change', function() {
-                // Oculta todos los certificados y sus títulos
                 const allCertificates = document.querySelectorAll('.mb-8');
                 allCertificates.forEach(function(certificate) {
                     certificate.style.display = 'none';
                 });
 
-                // Si la opción seleccionada es "todos", muestra todos los certificados
                 const selectedOption = this.value;
                 if (selectedOption === 'Todos') {
                     allCertificates.forEach(function(certificate) {
                         certificate.style.display = 'block';
                     });
                 } else {
-                    // Si no, muestra solo los certificados que corresponden a la opción seleccionada
                     const certificatesToShow = document.querySelectorAll(`#${selectedOption}`);
                     certificatesToShow.forEach(function(certificate) {
                         certificate.style.display = 'block';
@@ -65,27 +162,21 @@
             });
 
             document.getElementById('search').addEventListener('input', function() {
-            // Obtén el texto de búsqueda en minúsculas
-            const searchText = this.value.toLowerCase();
-
-            // Para cada certificado...
-            const allCertificates = document.querySelectorAll('.col-md-4');
-            allCertificates.forEach(function(certificate) {
-                // Obtén el título del certificado en minúsculas
-                const title = certificate.querySelector('.card-title').textContent.toLowerCase();
-
-                // Si el título del certificado incluye el texto de búsqueda, muestra el certificado, si no, ocúltalo
-                if (title.includes(searchText)) {
-                    certificate.style.display = 'block';
-                    certificate.parentNode.parentNode.style.display = 'block';
-                } else {
-                    certificate.style.display = 'none';
-                    certificate.parentNode.parentNode.style.display = 'none';
-                }
+                const searchText = this.value.toLowerCase();
+                const allCertificates = document.querySelectorAll('.col-md-4');
+                allCertificates.forEach(function(certificate) {
+                    const title = certificate.querySelector('.card-title').textContent.toLowerCase();
+                    if (title.includes(searchText)) {
+                        certificate.style.display = 'block';
+                        certificate.parentNode.parentNode.style.display = 'block';
+                    } else {
+                        certificate.style.display = 'none';
+                        certificate.parentNode.parentNode.style.display = 'none';
+                    }
+                });
             });
         });
-        });
-</script>
+    </script>
 </head>
 <body>
     <div>
@@ -136,12 +227,16 @@
                 </div>
             </div>
         </main>
-        <div id="scrollToTop" onclick="scrollToTop()" style="display: none; cursor: pointer;">⇧</div>
         <footer class="py-4 bg-dark text-white text-center">
             <div class="container">
-              <p class="mb-0">© 2024 Eduardo Carbajal Mendoza. Todos los derechos reservados.</p>
+                <p class="mb-0">© 2024 Eduardo Carbajal Mendoza. Todos los derechos reservados.</p>
             </div>
         </footer>
     </div>
+    <!-- Agregar los scripts de Bootstrap y jQuery al final del body -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
+

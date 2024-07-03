@@ -50,6 +50,12 @@ h2 {
     object-fit: cover;
 }
 
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
 /* Sombra en la parte inferior de los contenedores */
 .sombra-inferior {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
