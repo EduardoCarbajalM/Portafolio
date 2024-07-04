@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Proyectos - Eduardo Carbajal Mendoza</title>
+    <link rel="stylesheet" href="style_certificaciones.css">
+    <script>
+        function agregar_proyecto(imagen, titulo, descripcion, catalogo, url, moreInfo) {
+            const container = document.querySelector(`#${catalogo.replace(' ', '-')} .row`);
+            if (!container) {
+                console.error(`No se encontró el contenedor para el catálogo: ${catalogo}`);
+                return;
+            }
+
+            // Genera un ID único para el modal
+            const modalId = `moreInfoModal-${titulo.replace(/\\s+/g, '-')}`;
+
+            // Crea un nuevo elemento div
+            const certificationDiv = document.createElement('div');
+            certificationDiv.className = 'col-md-4 d-flex align-items-stretch';
+
+            // Crea el contenido HTML dentro del div
+            certificationDiv.innerHTML = `
+                <div class="card mb-4 shadow-sm sombra-inferior">
+                    <img src="${imagen}" alt="${titulo}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">${titulo}</h5>
+                        <p class="card-text">
+                            ${descripcion}
+                        </p>
+                        <div class="card-buttons mt-auto">
+                            <a href="${url}" target="_blank" class="btn btn-primary">Ver Proyecto</a>
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#${modalId}">
+                                Más información
+                            </button>
+                        </div>    
+                    </div>
+                </div>
+                <div class="modal fade" id="${modalId}" tabindex="-1" role="dialog" aria-labelledby="${modalId}Label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="${modalId}Label">Más información sobre ${titulo}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ${moreInfo}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Agrega el nuevo div al contenedor
+            container.appendChild(certificationDiv);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Programación
+            agregar_proyecto(
+                'img/Blackmoon.png', 
+                'Cafetería Blackmoon', 
+                'Tecnologias utilizadas: HTML, CSS, JS, PHP, MYSQL, BOOTSTRAP, JQuery, SweetAlert, Json, AJAX', 
+                'Programación-web', 
+                'https://blkmooncoffee.com/', 
+                'Blackmoon es tu solución ideal para gestionar inventarios y ventas en tu cafetería. Con una interfaz intuitiva y tecnologías avanzadas, permite registrar pedidos, generar tickets y administrar productos fácilmente. ¡Optimiza tus operaciones y mejora la satisfacción del cliente con Blackmoon!'
+            );
+
+            agregar_proyecto(
+                'img/Desencriptador.png', 
+                'Desencriptador', 
+                'Tecnologias utilizadas: HTML, CSS, JS, SweetAlert', 
+                'Programación-web', 
+                'https://eduardocarbajalm.github.io/Desencriptador/', 
+                'Protege tu información con nuestro Encriptador de Texto. Encripta y desencripta mensajes fácilmente, copia al portapapeles y mantén tus datos seguros con una interfaz intuitiva y notificaciones visuales atractivas. ¡Pruébalo ahora y descubre lo sencillo que es proteger tu texto!'
+            );
+
+            agregar_proyecto(
+                '', 
+                'E-Commerce diseños digitales', 
+                'Tecnologias utilizadas: HTML, CSS, JS, PHP, MYSQL, BOOTSTRAP, JQuery, SweetAlert, Json, AJAX', 
+                'Programación-web', 
+                'http://dankielito.com/', 
+                'Descubre nuestra tienda online para productos digitales de música y audiovisual. Explora diseños únicos, e-art y recursos de producción. Compra y descarga al instante con una interfaz fácil de usar y pagos seguros. ¡Empieza tu viaje creativo con nosotros!'
+            );
+
+            agregar_proyecto(
+                'img/cuestionario_valq.png', 
+                'Cuestionario VALQ', 
+                'Tecnologias utilizadas: HTML, CSS, JS, PHP, MYSQL, BOOTSTRAP, Json, Jspdf', 
+                'Programación-web', 
+                'https://valq.nazmendoza.com/', 
+                'Cuestionario para poner a prueba y descrubir como es que enseñas o mejor aprendes. Descubre tus resultados en un pdf descargable con metricas estadisticas por diferentes parámetros.'
+            );
+
+            agregar_proyecto(
+                'img/cuestionario_dhap.png', 
+                'Cuestionario DHAP', 
+                'Tecnologias utilizadas: HTML, CSS, JS, PHP, MYSQL, BOOTSTRAP, Json, Jspdf', 
+                'Programación-web', 
+                'https://dhap.nazmendoza.com/', 
+                'Cuestionario para poner a prueba y descrubir en que areas eres competente. Descubre tus resultados en un pdf descargable con metricas estadisticas por diferentes parámetros.'
+            );
+
+        });
+
+    </script>
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <header class="py-4 bg-primary">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="text-white">Proyectos</h1>
+                </div>
+            </div>
+        </header>
+        <main class="py-12 px-6">
+            <div class="container mx-auto">
+                <div id="Programación-web" class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Programación Web</h2>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="py-4 bg-dark text-white text-center">
+            <div class="container">
+            <p class="mb-0">© 2024 Eduardo Carbajal Mendoza. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
