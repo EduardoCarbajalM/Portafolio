@@ -80,6 +80,19 @@ h2 {
     padding-right: 15px;
 }
 
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #0056b3;
+    font-size: 50px;
+    transition: color 0.7s ease;
+}
+  
+#scrollToTop.clicked {
+    color: white;
+} 
+
 /* Footer */
 footer {
     flex-shrink: 0;
