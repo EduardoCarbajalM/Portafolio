@@ -35,13 +35,10 @@
                 const allCertificates = document.querySelectorAll('.col-md-4');
                 allCertificates.forEach(function(certificate) {
                     const title = certificate.querySelector('.card-title').textContent.toLowerCase();
-                    if (title.includes(searchText)) {
-                        certificate.style.display = 'block';
-                        certificate.parentNode.parentNode.style.display = 'block';
-                    } else {
-                        certificate.style.display = 'none';
-                        certificate.parentNode.parentNode.style.display = 'none';
-                    }
+                    const description = certificate.querySelector('.card-text').textContent.toLowerCase(); // Asegúrate de tener la clase .card-description en tu HTML
+                    const matches = title.includes(searchText) || description.includes(searchText);
+                    certificate.style.display = matches ? 'block' : 'none';
+                    certificate.parentNode.parentNode.style.display = matches ? 'block' : 'none';
                 });
             });
         });
@@ -87,7 +84,7 @@
                         <option value="PaqueteríaOffice">Paquetería Office</option>
                         <option value="Idiomas">Idiomas</option>
                         <option value="SoftSkills">Soft Skills</option>
-                        <option value="Otros">Otros</option>
+                        <option value="Otros">Metodologias</option>
                     </select>
                 </div>
                 <div id="Programación" class="mb-8">
@@ -115,7 +112,7 @@
                     <div class="row"></div>
                 </div>
                 <div id="Otros" class="mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Otros</h2>
+                    <h2 class="text-2xl font-bold mb-4">Metodologias</h2>
                     <div class="row"></div>
                 </div>
                 <div id="scrollToTop" onclick="scrollToTop()" style="display: block; cursor: pointer;">⇧</div>

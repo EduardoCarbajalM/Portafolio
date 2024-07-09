@@ -21,8 +21,8 @@ function addCertification(image, title, description, catalog, url, moreInfo) {
                 <p class="card-text">
                     ${description}
                 </p>
-                <div class="card-buttons mt-auto">
-                    <a href="${url}" target="_blank" class="btn btn-primary">Ver Certificado</a>
+                <div class="d-flex flex-column flex-sm-row justify-content-between mt-auto">
+                    <a href="${url}" target="_blank" class="btn btn-primary mb-2 mb-sm-0">Ver Certificado</a>
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#${modalId}">
                         Más información
                     </button>
@@ -35,7 +35,7 @@ function addCertification(image, title, description, catalog, url, moreInfo) {
                     <div class="modal-header">
                         <h5 class="modal-title" id="${modalId}Label">Más información sobre ${title}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">×</span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -55,6 +55,7 @@ function addCertification(image, title, description, catalog, url, moreInfo) {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Programación
+
     addCertification(
         'certificados/programacion/Certificado_Back_end.png', 
         'Programa Oracle Next Education F2 T5 Back-end', 
@@ -279,8 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://app.aluracursos.com/certificate/e0f38e35-3c2d-467c-ba5c-e3ad13e8ab69',
         'El curso ‘Spring Boot 3: documentar, probar y preparar una API para su implementación’ me permitió aprender sobre agendamiento de consultas, reglas de negocio, documentación de la API, tests automatizados, y build del proyecto. Completé todas las 51 actividades con éxito.'
     );
-        
-            
+
     // Base de datos
     addCertification(
         'certificados/baseDeDatos/sql_mysql_server_oracle.png', 
@@ -308,7 +308,26 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://app.aluracursos.com/degree/certificate/d07c177f-3d8b-4845-b681-8667b9522bc3', 
         'En mi curso de SQL con MySQL, adquirí una sólida base en la manipulación y consulta de datos, profundicé en las consultas SQL, aprendí a manipular datos con comandos DML y a ejecutar código con Procedures SQL. Consolidé mis habilidades con un proyecto final y finalmente, me sumergí en la administración de MySQL, aprendiendo sobre seguridad y optimización de la base de datos. Esta experiencia integral me ha equipado con habilidades valiosas para futuros proyectos y roles.'
     );
-    
+
+    /*
+    addCertification(
+        'certificados/baseDeDatos/.png', 
+        '', 
+        '', 
+        'BaseDeDatos', 
+        '',
+        ''
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/.png', 
+        '', 
+        '', 
+        'BaseDeDatos', 
+        '',
+        ''
+    );
+    */
     // Negocios
     addCertification(
         'certificados/negocios/Business_Agility_G5.png', 
@@ -327,7 +346,61 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://app.aluracursos.com/degree/certificate/16e46f5e-78cd-4ab5-84ea-0e97ee2e9b0f',
         'Como parte de mi formación Emprendimiento G5 - ONE, comencé con el curso de Lean Startup, que me proporcionó un método eficaz para convertir una idea de negocio en una empresa. Luego, el curso de Emprendimiento me guió desde la concepción de una idea hasta la creación de un plan de negocios sólido. El curso de Pitch para entrevistas me dotó de las habilidades necesarias para hacer presentaciones impactantes. Finalmente, los cursos de Business Model Canvas parte I y II me ofrecieron un modelo poderoso para mi negocio y me ayudaron a avanzar con mi modelo de negocios.'
     );
+
+    addCertification(
+        'certificados/negocios/fundamentos_agile.png',
+        'Fundamentos de Agilidad: Primeros pasos para la transformación ágil',
+        'Transformación ágil',
+        'Negocios',
+        'https://app.aluracursos.com/certificate/0d800e79-9663-4333-880d-58a5bcdbaece',
+        'En este curso, aprendí los fundamentos de la agilidad, incluyendo el método ágil, el método cascada, la priorización, el flujo de ejecución, y la retroalimentación. Completé 26 actividades, adquiriendo una comprensión sólida de lo que significa ser ágil.'
+    );
     
+    addCertification(
+        'certificados/negocios/gestion_agile.png',
+        'Gestión ágil: Liderando el cambio en un ambiente de agilidad',
+        'Liderazgo ágil',
+        'Negocios',
+        'https://app.aluracursos.com/certificate/5d2fcfbb-abe2-4210-81bb-1d83501b9e44',
+        'Este curso me proporcionó una visión profunda de la gestión ágil, cubriendo temas como la gestión tradicional, VUCA, motivación, liderazgo, empoderamiento y delegación. Completé 37 actividades, desarrollando habilidades para liderar el cambio en un ambiente de agilidad.'
+    );
+
+    addCertification(
+        'certificados/negocios/empresa_agile.png',
+        'La Empresa Ágil: Introduciendo el Business Agility en las organizaciones',
+        'Agilidad empresarial',
+        'Negocios',
+        'https://app.aluracursos.com/certificate/b5a740bd-a061-4254-8da8-5ea4e5e6a07f',
+        'En este curso, exploré el concepto de Business Agility, aprendiendo a identificar la complejidad, entender la estructura organizacional, y enfocarme en la generación de valor. Completé 28 actividades, adquiriendo conocimientos sobre cómo una empresa aprende a ser ágil.'
+    );
+
+    addCertification(
+        'certificados/negocios/organizacion_agile.png',
+        'Organización de equipos ágiles: Las funciones existentes en un equipo',
+        'Equipos ágiles',
+        'Negocios',
+        'https://app.aluracursos.com/certificate/0df55f9b-f8ac-41e5-a097-8aafa6257d61',
+        'Este curso me enseñó sobre la organización de equipos ágiles, cubriendo temas como la autoorganización, los tipos de equipos ágiles, el equipo Scrum, el Product Owner, el Development Team, el Scrum Master, y los Equipos Kanban. Completé 34 actividades, aprendiendo sobre las funciones existentes en un equipo ágil.'
+    );
+
+    addCertification(
+        'certificados/negocios/lean_startup.png',
+        'Lean Startup: Método eficaz para convertir una idea de negocio en empresa',
+        'Startup eficaz',
+        'Negocios',
+        'https://app.aluracursos.com/certificate/1965559b-452c-4fa7-a3f0-fd9a80685d43',
+        'Este curso me enseñó el método Lean Startup, que es un enfoque eficaz para convertir una idea de negocio en una empresa. Aprendí sobre la experimentación rápida, el aprendizaje validado, las fases del MVP, cómo medir y pivotar, y cómo acelerar, crecer e innovar. También recibí recomendaciones para prototipar. Completé 29 actividades, desarrollando habilidades esenciales para el lanzamiento de una startup.'
+    );
+
+    addCertification(
+        'certificados/negocios/emprendimiento_idea.png',
+        'Emprendimiento: De la idea al plan de negocios',
+        'Emprendimiento efectivo',
+        'Negocios',
+        'https://app.aluracursos.com/certificate/7632a596-19b1-4066-8ee5-a6c528d4ac4b',
+        'En este curso, aprendí sobre los pilares del emprendimiento, cómo generar ideas y oportunidades, y cómo desarrollar un modelo de negocios. También me familiaricé con el Business Model Canvas y cómo elaborar un plan de negocios. Completé 35 actividades, adquiriendo una comprensión sólida del proceso de emprendimiento.'
+    );
+
     // Paqueteria Office
     addCertification(
         'certificados/office/Excel_Avanzado.png', 
@@ -367,6 +440,60 @@ document.addEventListener('DOMContentLoaded', () => {
         'Este curso se centró en habilidades como comunicación efectiva, trabajo en equipo, resolución de problemas y liderazgo.'
     );
 
+    addCertification(
+        'certificados/softSkills/aprender_a_aprender.png', 
+        'Aprender a aprender: tecnicas para tu autodesarrollo', 
+        'Autodesarrollo efectivo', 
+        'SoftSkills', 
+        'https://app.aluracursos.com/certificate/84b63011-94ad-48f3-8eff-cd6a16df9e3f', 
+        'En este curso, adopté el aprendizaje como un estilo de vida, explorando temas como el talento, la disciplina, el poder de las metas y la rutina de aprendizaje. Completé 61 actividades, demostrando un compromiso total con mi autodesarrollo.'
+    );
+
+    addCertification(
+        'certificados/softSkills/desarrollo_carrera.png', 
+        'Desarrollo de carrera: demanda del mercado', 
+        'Carrera y mercado', 
+        'SoftSkills', 
+        'https://app.aluracursos.com/certificate/1a49d838-0556-4fb8-b059-01fb2b81038c', 
+        'Este curso me ayudó a entender la demanda del mercado en relación con mi carrera profesional. A través de 33 actividades, aprendí sobre la medición del rendimiento, las motivaciones, los valores y las demandas del mercado.'
+    );
+
+    addCertification(
+        'certificados/softSkills/foco.png', 
+        'Foco: Enfocarse trae más resultados para el día a día', 
+        'Enfoque diario', 
+        'SoftSkills', 
+        'https://app.aluracursos.com/certificate/0bee1878-14ff-4a02-8043-4f984cb8cb15', 
+        'Este curso me enseñó la importancia de mantener el enfoque en mis actividades diarias. Aprendí sobre la ilusión de ser multitarea, las creencias, la fuerza de voluntad y el equilibrio en la vida.'
+    );
+
+    addCertification(
+        'certificados/softSkills/habitos.png', 
+        'Hábitos: Ser productivo para cumplir sus metas personales', 
+        'Productividad y hábitos', 
+        'SoftSkills', 
+        'https://app.aluracursos.com/certificate/d1d247e2-e422-4a2f-9e58-f47c4f3cee20', 
+        'En este curso, aprendí a reconocer mis hábitos y cómo pueden afectar mi productividad. También aprendí sobre la autodisciplina y cómo deshacerme de los viejos hábitos.'
+    );
+
+    addCertification(
+        'certificados/softSkills/pitch.png', 
+        'Presentaciones impactantes', 
+        'Haga presentaciones impactantes para impresionar', 
+        'SoftSkills', 
+        'https://app.aluracursos.com/certificate/ed82b410-4901-449f-859f-7400acb1a195', 
+        'Este curso me enseñó a hacer presentaciones impactantes para entrevistas. Aprendí a crear un discurso, a escribir mi pitch y a analizarlo.'
+    );
+
+    addCertification(
+        'certificados/softSkills/linkedin.png', 
+        'LinkedIn: Como hacer que tu perfil trabaje por ti', 
+        'Perfil de LinkedIn', 
+        'SoftSkills', 
+        'https://app.aluracursos.com/certificate/4e75a9c1-e477-4308-90f0-4c4ba0bf65da', 
+        'Este curso me enseñó a optimizar mi perfil de LinkedIn para que trabaje por mí. Aprendí sobre los diferentes tipos de perfiles, cómo hacer conexiones y cómo publicar contenido de calidad.'
+    );
+
     // Otros
     addCertification(
         'certificados/otros/Lean_six_sigma.png', 
@@ -375,5 +502,23 @@ document.addEventListener('DOMContentLoaded', () => {
         'Otros', 
         'https://lean-certificates.s3.us-east-2.amazonaws.com/WBMASIVOOCT2022/certificado-Eduardo_Carbajal_Mendoza_1277.pdf', 
         'Este certificado reconoce competencias en un área especializada no incluida en las categorías anteriores.'
+    );
+
+    addCertification(
+        'certificados/negocios/lean_startup.png',
+        'Lean Startup: Método eficaz para convertir una idea de negocio en empresa',
+        'Startup eficaz',
+        'Otros',
+        'https://app.aluracursos.com/certificate/1965559b-452c-4fa7-a3f0-fd9a80685d43',
+        'Este curso me enseñó el método Lean Startup, que es un enfoque eficaz para convertir una idea de negocio en una empresa. Aprendí sobre la experimentación rápida, el aprendizaje validado, las fases del MVP, cómo medir y pivotar, y cómo acelerar, crecer e innovar. También recibí recomendaciones para prototipar. Completé 29 actividades, desarrollando habilidades esenciales para el lanzamiento de una startup.'
+    );
+
+    addCertification(
+        'certificados/negocios/gestion_agile.png',
+        'Gestión ágil: Liderando el cambio en un ambiente de agilidad',
+        'Liderazgo ágil',
+        'Otros',
+        'https://app.aluracursos.com/certificate/5d2fcfbb-abe2-4210-81bb-1d83501b9e44',
+        'Este curso me proporcionó una visión profunda de la gestión ágil, cubriendo temas como la gestión tradicional, VUCA, motivación, liderazgo, empoderamiento y delegación. Completé 37 actividades, desarrollando habilidades para liderar el cambio en un ambiente de agilidad.'
     );
 });
