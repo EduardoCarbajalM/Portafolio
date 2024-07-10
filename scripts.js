@@ -309,25 +309,69 @@ document.addEventListener('DOMContentLoaded', () => {
         'En mi curso de SQL con MySQL, adquirí una sólida base en la manipulación y consulta de datos, profundicé en las consultas SQL, aprendí a manipular datos con comandos DML y a ejecutar código con Procedures SQL. Consolidé mis habilidades con un proyecto final y finalmente, me sumergí en la administración de MySQL, aprendiendo sobre seguridad y optimización de la base de datos. Esta experiencia integral me ha equipado con habilidades valiosas para futuros proyectos y roles.'
     );
 
-    /*
     addCertification(
-        'certificados/baseDeDatos/.png', 
-        '', 
-        '', 
+        'certificados/baseDeDatos/introduccion_sql.png', 
+        'Introducción a SQL con MySQL: Manipule y consulte datos', 
+        'Fundamentos de SQL', 
         'BaseDeDatos', 
-        '',
-        ''
+        'https://app.aluracursos.com/certificate/590cc782-798a-498b-a513-1f91d94cde1a',
+        'Durante este curso, adquirí una base sólida en SQL y aprendí a manipular datos en una base de datos MySQL. Me resultó especialmente útil para comprender conceptos como el filtrado y la presentación de datos.'
     );
 
     addCertification(
-        'certificados/baseDeDatos/.png', 
-        '', 
-        '', 
+        'certificados/baseDeDatos/consultas_sql.png', 
+        'Consultas SQL: Avanzando en SQL con MySQL', 
+        'Consultas avanzadas', 
         'BaseDeDatos', 
-        '',
-        ''
+        'https://app.aluracursos.com/certificate/2cf4ed12-c86e-432d-bcb4-52711211de97',
+        'En este curso, profundicé en consultas más avanzadas en SQL. Aprendí a unir tablas, utilizar funciones y optimizar mis consultas.'
     );
-    */
+
+    addCertification(
+        'certificados/baseDeDatos/comandos_dml.png', 
+        'Comandos DML: Manipulación de datos con MySQL', 
+        'Dominé manipulación de datos', 
+        'BaseDeDatos', 
+        'https://app.aluracursos.com/certificate/09be77bf-88b0-4a49-8e19-fcae678ad519',
+        'Aquí me sumergí en los comandos DML (Data Manipulation Language) en MySQL. Aprendí a insertar, actualizar y eliminar registros en las tablas'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/procedures_sql.png',
+        'Procedures SQL: Ejecutando código en MySQL',
+        'Creé procedimientos almacenado',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/8e63b101-2862-4823-b81b-ad51c401f453',
+        'Durante este curso, profundicé en los procedimientos almacenados en MySQL. Aprendí a crear y ejecutar código personalizado en la base de datos'
+    );
+    
+    addCertification(
+        'certificados/baseDeDatos/sql_mysql.png',
+        'SQL con MySQL: Proyecto final',
+        'Trabajé en un proyecto final',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/dd309eec-e293-4663-93db-4db8c8263a03',
+        'En este curso, apliqué todo lo que había aprendido en un proyecto final. Trabajé en la recuperación de datos, la optimización y la seguridad de la base de datos'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/admin_mysql.png',
+        'Administración de MySQL: Seguridad y optimización de la base de datos - Parte 1',
+        'Aprendí sobre seguridad y optimización',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/35b348f0-91ff-4cdd-90d9-ab5bd28880db',
+        'Aquí me sumergí en la administración de MySQL, explorando temas como índices, gestión de usuarios y seguridad en la base de datos'
+    );
+    
+    addCertification(
+        'certificados/baseDeDatos/admin_mysql_2.png',
+        'Administración de MySQL: Seguridad y optimización de la base de datos - Parte 2',
+        'Optimización y seguridad en MySQL',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/605d62a5-20b9-4897-810f-5e85b0b16bdb',
+        'Durante este curso, profundicé mis habilidades en la optimización y la seguridad de bases de datos. Aprendí a entender y analizar el plan de ejecución de consultas SQL, lo cual es crucial para la optimización. Además, exploré la importancia de los índices en una base de datos MySQL y adquirí conocimientos para gestionar usuarios y asignarles diferentes niveles de privilegios.'
+    );
+
     // Negocios
     addCertification(
         'certificados/negocios/Business_Agility_G5.png', 
