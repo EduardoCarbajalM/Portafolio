@@ -372,6 +372,87 @@ document.addEventListener('DOMContentLoaded', () => {
         'Durante este curso, profundicé mis habilidades en la optimización y la seguridad de bases de datos. Aprendí a entender y analizar el plan de ejecución de consultas SQL, lo cual es crucial para la optimización. Además, exploré la importancia de los índices en una base de datos MySQL y adquirí conocimientos para gestionar usuarios y asignarles diferentes niveles de privilegios.'
     );
 
+    addCertification(
+        'certificados/baseDeDatos/python_data_science.png',
+        'Python para Data Science: Introducción al Lenguaje',
+        'Fundamentos de Python',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/1225ccb9-9f47-4278-bec2-9daf6daf0b2e',
+        'En este curso, adquirí una sólida comprensión de los fundamentos del lenguaje de programación Python. Aprendí sobre variables, funciones, parámetros, condicionales, conversión de datos, listas, bucles, booleanos y cómo importar librerías. También me introduje a la creación de gráficos con matplotlib.'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/python_data_funciones.png',
+        'Python para Data Science: Funciones, Librerías y Pandas básico',
+        'Python y Pandas',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/b598d023-f678-434c-b615-f089713b20d0',
+        'Este curso me permitió profundizar en el uso de Python para la ciencia de datos. Aprendí sobre listas estáticas (tuplas), mapeo de datos (diccionarios), organización del código (funciones y paquetes), y la biblioteca de los científicos de datos: Pandas.'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/python_pandas.png',
+        'Python Pandas: Tratamiento y análisis de datos',
+        'Análisis de datos con Pandas',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/63c47b0a-fa90-4cef-b0a6-d2d643fd18f0',
+        'En este curso, aprendí a trabajar con datos utilizando la biblioteca Pandas en Python. Aprendí a importar datos, crear series e índices, filtrar datos, tratar datos faltantes, crear nuevas variables, realizar estadísticas descriptivas y excluir outliers.'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/data_visualization.png',
+        'Data Visualization: Explorando con Seaborn',
+        'Visualización de datos con Seaborn',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/89b9ecf3-fb4e-4aad-8a3a-35f54b30c746',
+        'Este curso me enseñó a explorar datos visualmente utilizando la biblioteca Seaborn en Python. Aprendí a importar y traducir variables, realizar análisis exploratorio de variables, comparar y analizar variables categóricas, realizar análisis de variables numéricas y regresión, y realizar análisis conjunto de variables.'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/machine_learning_1.png',
+        'Machine Learning: clasificación con SKLearn',
+        'Clasificación con Machine Learning',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/6257d3f7-f544-4109-b491-6d881b397671',
+        ': En este curso, aprendí sobre la clasificación en Machine Learning utilizando la biblioteca SKLearn en Python. Aprendí a leer y manipular datos, crear un modelo baseline, trabajar con estimadores no lineales y dummy classifiers, y utilizar árboles de decisión.'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/machine_learning_2.png',
+        'Machine Learning: Optimización de modelos a través de hiperparámetros',
+        'Optimización de modelos de Machine Learning',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/4cb58050-7103-4283-94a2-a0e768e8bd05',
+        'Este curso me enseñó a optimizar modelos de Machine Learning a través de hiperparámetros. Aprendí sobre hiperparámetros, optimización y overfit, exploración de 2 dimensiones de hiperparámetros, trabajo con 3 o más dimensiones, búsqueda de hiperparámetros con GridSearchCV, y Nested Cross Validation y validación del modelo elegido.'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/oracle_ads.png',
+        'Oracle ADS: análisis de datos en la nube',
+        'Análisis de datos con Oracle',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/a2f25702-9e7c-46b5-8fea-7591820d9a46',
+        'Este curso me introdujo al ambiente Oracle y al análisis de datos en la nube. Aprendí a conocer los datos, trabajar con los datos, definir el alcance del proyecto, y prepararme para Machine Learning.'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/machine_learning_3.png',
+        'Machine Learning con Oracle ADS: productividad en la creación de modelos',
+        'Creación de modelos con Oracle',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/0707df70-59c7-4e97-93e7-ea076b70806e',
+        'En este curso, aprendí a crear modelos en Oracle Cloud, explorar Oracle AutoML, evaluar el modelo, entender el modelo, y publicar el modelo.'
+    );
+
+    addCertification(
+        'certificados/baseDeDatos/Oracle_analytics.png',
+        'Oracle Analytics: visualizando datos',
+        'Visualización de datos con Oracle',
+        'BaseDeDatos',
+        'https://app.aluracursos.com/certificate/d4132334-8bd7-45d8-9b22-2609f2a70963',
+        'Este curso me enseñó a visualizar datos con Oracle Analytics. Aprendí a crear el proyecto, crear gráficas, interactuar entre las visualizaciones, y elaborar la presentación.'
+    );
+
     // Negocios
     addCertification(
         'certificados/negocios/Business_Agility_G5.png', 
